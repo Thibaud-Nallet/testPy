@@ -1,3 +1,5 @@
+from datetime import date
+
 class User:
     def __init__(self, name, firstname, annee):
         assert name.isalnum(), "Attribut 'name' : doit être alphanumérique (a-z, A-Z et 0-9)"
@@ -12,4 +14,7 @@ class User:
         self.annee = annee
     
     def __str__(self):
-        return f"[Nom : {self.name} / Prenom : {self.firstname} / Vous avez : {self.annee}]"
+        date_day = date.today()
+        age = date_day.year - self.annee
+
+        return f"Bonjour {self.firstname} {self.name} Vous avez : {age} ans !"
