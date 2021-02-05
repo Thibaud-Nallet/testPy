@@ -6,10 +6,10 @@ class User:
         assert len(firstname) > 3 and len(firstname) < 25, "Attribut 'firstname' : nombre de caractères compris entre 3 et 25"
         assert isinstance(annee, int), "Attribut 'annee' : doit être un entier"
         assert annee > 1900 and annee < 2021, "Attribut 'annee' : doit être compris entre 1900 et 2021"
-        
+
         self.name = name
         self.firstname = firstname
         self.annee = annee
     
     def __str__(self):
-        return f"[Nom : {self.name} / Prenom : {self.firstname} / Annee : {self.annee}]"
+        return f"[Nom : {self.name} / Prenom : {self.firstname} / Vous avez : {self.annee}]"
